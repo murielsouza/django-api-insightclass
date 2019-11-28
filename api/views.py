@@ -11,7 +11,7 @@ class TrofeuViewSet(viewsets.ModelViewSet):
     serializer_class = TrofeuSerializer
 
 class AlunoViewSet(viewsets.ModelViewSet):
-    queryset = Aluno.objects.all()
+    queryset = Aluno.objects.order_by('-media')
     serializer_class = AlunoSerializer
 
 class MissaoViewSet(viewsets.ModelViewSet):

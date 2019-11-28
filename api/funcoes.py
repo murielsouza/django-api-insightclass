@@ -22,4 +22,9 @@ def getListaClassificacao(request):
                 notaTemp = notaTemp + m.valor
         Aluno.objects.filter(id=a.id).update(media=notaTemp)
         notaTemp = 0
+    listaAlunos = Aluno.objects.order_by('-media')
+    cont = 0
+    for aluno in listaAlunos:
+        cont+=1
+        Aluno.objects.filter(id = aluno.id).update(posicao = cont)
     return HttpResponse(True)

@@ -25,7 +25,7 @@ SECRET_KEY = 'lsnk-2()59u7ykm2tvu=68#hdu93s-)+-abyugyb519b^yrtbb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -54,7 +54,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:4200',
+    'http://18.189.43.35',
+    'http://localhost:4200'
 )
 
 ROOT_URLCONF = 'insightclass_django.urls'

@@ -18,7 +18,7 @@ class AlunoSerializer(WritableNestedModelSerializer):
     trofeis = TrofeuSerializer(many = True)
     class Meta:
         model = Aluno
-        fields = ('id','nome', 'media','trofeis')
+        fields = ('id', 'posicao', 'nome', 'media','trofeis')
 
 class MissaoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

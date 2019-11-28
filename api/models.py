@@ -1,3 +1,4 @@
+
 from django.db import models
 from django.contrib.auth.models import User
 from django import forms
@@ -22,6 +23,7 @@ class Trofeu(models.Model):
 
 class Aluno(models.Model):
     id = models.AutoField(primary_key=True)
+    posicao = models.IntegerField(blank=True, null = True)
     nome = models.CharField(max_length=128)
     media = models.DecimalField(max_digits=6, decimal_places=2)
     trofeis = models.ManyToManyField(Trofeu, blank=True, related_name='trofeis')
